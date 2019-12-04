@@ -1,5 +1,5 @@
 <?php
-Config::set('petinfo', array(
+Config::set('creaturetopia', array(
     'active' => true,
     'path' => 'modules',
     'topmenu' => true,
