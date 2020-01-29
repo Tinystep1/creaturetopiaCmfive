@@ -16,7 +16,8 @@ class CreaturetopiainitialMigration extends CmfiveMigration {
 			])->addColumn($column) // add the id column
 			//column names correspond to filler text in petinfo.html page in Creatretopia-2 repository.
 			->addStringColumn('animal_name')
-			->addTextColumn('description_of_animal')
+			->addColumn('description_of_animal', 'text', ['null' => true])
+			//->addTextColumn('description_of_animal')
 			->addStringColumn('item_list')
 			->addStringColumn('stat_list')
 			->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.

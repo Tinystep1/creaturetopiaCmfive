@@ -1,0 +1,41 @@
+#site-name{
+    text-align: center;
+    background-color: #2FFB01;
+    color: #FB7E00;
+    }
+#link{
+    text-align: center;
+  }
+.thin-orange-border{
+    border-color: orange;
+    border-width: 5px;
+    border-style: solid;
+  }
+.green-background{
+    background-color: #2FFB01;
+  }
+#smallImage{
+    width: 100px;
+    border-color: orange;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    }
+#animalIntro{
+    background-color: #2FFB01;
+    }
+#animalInfo{
+    background-color: #2FFB01;
+    }
+#button{
+    text-align: center;
+    }
+#form{
+    background-color: #2FFB01;
+    }
+#return-links{
+    background-color: #2FFB01
+  }
+#question{
+    color: #FB7E00;
+}
