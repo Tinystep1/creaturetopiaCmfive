@@ -17,7 +17,7 @@ function index_ALL(Web $w) {
             // add values to the row in the same order as the table headers
             $row[] = $animal->animal_name;
             $row[] = $animal->description_of_animal;
-            $row[] = $animal->item_list;
+            $row[] = $animal->getItemList();
             $row[] = $animal->stat_list;
             // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
             $actions = [];
