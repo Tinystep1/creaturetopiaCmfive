@@ -39,3 +39,10 @@
 #question{
     color: #FB7E00;
 }
+.banner {
+    max-width: 100%;
+    height: auto;
+}
+#body {
+    width: 100vw;
+}
