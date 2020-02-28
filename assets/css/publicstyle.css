@@ -10,6 +10,8 @@
     border-color: orange;
     border-width: 5px;
     border-style: solid;
+    height: 90px;
+    width: 90px;
   }
 .green-background{
     background-color: #2FFB01;
@@ -39,7 +41,7 @@
 #question{
     color: #FB7E00;
 }
-.banner {
+#banner {
     max-width: 100%;
     height: auto;
 }
