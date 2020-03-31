@@ -2,10 +2,10 @@
 
 function edit_GET(Web $w) {
 
-   // we now need to check if we are creating a new animal or editing an existing one
-   // we will use pathMatch to retrieve an aniaml id from the url.
+   // we now need to check if we are creating a new item or editing an existing one
+   // we will use pathMatch to retrieve an item id from the url.
    $p = $w->pathMatch('id');
-   // if the id exists we will retrieve the data for that animal otherwise we will create a new item. 
+   // if the id exists we will retrieve the data for that item otherwise we will create a new item. 
    $item = !empty($p['id']) ? $w->creaturetopia->GetItemForId($p['id']) : new creaturetopiaItem($w);
 
     //add a title to the action
