@@ -47,7 +47,7 @@ public function navigation(Web $w, $title = null, $prenav=null) {
     }
     $nav = $prenav ? $prenav : array();
     if ($w->Auth->loggedIn()) {
-        $w->menuLink("creaturetopia","Pet Info", $nav);
+        $w->menuLink("creaturetopia/index","Pet Info", $nav);
         $w->menuLink("creaturetopia-item/index","Items", $nav);
         
     }
