@@ -9,7 +9,7 @@ function edit_GET(Web $w) {
    $item = !empty($p['id']) ? $w->creaturetopia->GetItemForId($p['id']) : new creaturetopiaItem($w);
 
     //add a title to the action
-   // change the title to reflect editing or adding a new anaiml
+   // change the title to reflect editing or adding a new item
    $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
 
     // this array is the form deffinition
@@ -18,7 +18,7 @@ function edit_GET(Web $w) {
             [                                   // each array on this level represents a row on the form. This row has only a single input.
                 ['Name','text','item_name', $item->item_name],      // this if the input field definition. [Label, type, name, value]
             ],
-            [                                   // this row has 1 input fields.
+            [                                   // this row has 1 input field.
                 ['Description', 'textarea', 'item_description',$item->item_description],    //brief item description
             ],
             [ 
@@ -33,6 +33,7 @@ function edit_GET(Web $w) {
    } else {
        $postUrl = '/creaturetopia-item/edit';
    }
+   
         // sending the form to the 'out' function bypasses the template. 
    $w->out(Html::multiColForm($formData, $postUrl));
     

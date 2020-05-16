@@ -4,9 +4,6 @@ function index_ALL(Web $w) {
     
     $w->ctx("title", "See Items");
 
-
-
-
     // access service functions using the Web $w object and the module name
     $creaturetopiaItem = $w->Creaturetopia->getAllItems();
 

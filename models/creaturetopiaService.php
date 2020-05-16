@@ -2,22 +2,22 @@
 
 class creaturetopiaService extends DbService {
 
-// returns all example animal instances
+// returns all Creaturetopia animal instances
 public function GetAllPetinfo() {
 return $this->GetObjects('creaturetopiaPetinfo',['is_deleted'=>0]);
 }
 
-// returns a single example aniaml matching the given id
+// returns a single Creaturetopia aniaml matching the given id
 public function GetPetinfoForId($id) {
 return $this->GetObject('creaturetopiaPetinfo',$id);
 }
 
-// returns all example item instances
+// returns all Creaturetopia item instances
 public function GetAllItems() {
     return $this->GetObjects('creaturetopiaItem',['is_deleted'=>0]);
     }
     
-    // returns a single example item matching the given id
+    // returns a single Creaturetopia item matching the given id
     public function GetItemForId($id) {
     return $this->GetObject('creaturetopiaItem',$id);
     }
@@ -25,6 +25,16 @@ public function GetAllItems() {
     public function GetItemLinksForInfoId($petinfo_id) {
         return $this->GetObjects('creaturetopiaItemLink',['is_deleted'=>0,'info_id'=>$petinfo_id]);
     }
+
+    // returns all creaturetopia stats instances
+public function GetAllStats() {
+    return $this->GetObjects('creaturetopiaStats',['is_deleted'=>0]);
+}
+
+// returns a single creaturetopia stat matching the given id
+public function GetStatForId($id) {
+    return $this->GetObject('creaturetopiaStats',$id);
+}
 
     public function getAllItemsForInfoId($petinfo_id) {
         $links = $this->GetItemLinksForInfoId($petinfo_id);
