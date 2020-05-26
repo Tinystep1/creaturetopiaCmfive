@@ -3,8 +3,12 @@ h1 {
     Background-color: #2FFB01;
     color: #FB7E00;
 }
+h2{
+    color: #FB7E00;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .thin-orange-border{
-    border-color: orange;
+    border-color: #FB7E00;
     border-width: 5px;
     border-style: solid;
 }
@@ -16,17 +20,13 @@ h1 {
 }
 #smallImage{
     width: 100px;
-    border-color: orange;
+    border-color: #FB7E00;
     border-width: 5px;
     border-style: solid;
     border-radius: 50%;
 }
 #button{
     text-align: center;
-}
-#question{
-    color: #FB7E00;
-    font-family: Arial, Helvetica, sans-serif;
 }
 #banner {
     max-width: 100%;
