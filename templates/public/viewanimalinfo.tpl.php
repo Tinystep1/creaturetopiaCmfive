@@ -1,11 +1,33 @@
-<div>
-  <!--Heading Banner-->
-    <header id="site-name">
-      <h1>
-        Creaturetopia
-      </h1>
-    </header>
-  </div class="green-background">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Pet Info</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <link rel="stylesheet" type="text/css" href="Styling.css">
+
+  
+
+
+  
+
+</head>
+<body>
+  <div>
+    <!--Heading Banner-->
+      <header id="site-name">
+        <h1>
+          Creaturetopia
+        </h1>
+      </header>
+  </div>
+  <main class="green-background">
       <section id="animalIntro">
       <!--small image of animal goes here-->
         <div id="introImage">
@@ -47,7 +69,9 @@
           <p>
             For information about differnt breeds in this species, click the link below:
           </p>
-          <p><a href="#">Breeds</a></p>
+          <nav>
+            <p><a href="#">Breeds</a></p>
+          </nav>
         </div>
       </section>
     </div>
@@ -55,6 +79,7 @@
       <p><a href="./index.html" accesskey="h">Site Home</a></p>
       <p><a href="#" accesskey="a">Your Homepage</a></p>
     </div>
+  </main>
     <footer id="legalities">
       <p>
         <small>
