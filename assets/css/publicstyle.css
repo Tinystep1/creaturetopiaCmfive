@@ -3,7 +3,10 @@ h1 {
     Background-color: #2FFB01;
     color: #FB7E00;
 }
-h2{
+h2 {
+    color: #FB7E00;
+}
+h3 {
     color: #FB7E00;
     font-family: Arial, Helvetica, sans-serif;
 }
