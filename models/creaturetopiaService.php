@@ -59,6 +59,7 @@ public function navigation(Web $w, $title = null, $prenav=null) {
     if ($w->Auth->loggedIn()) {
         $w->menuLink("creaturetopia/index","Pet Info", $nav);
         $w->menuLink("creaturetopia-item/index","Items", $nav);
+        $w->menuLink("creaturetopia-stats/index","Stats", $nav);
         
     }
     $w->ctx("navigation", $nav);

@@ -52,5 +52,5 @@ function edit_POST(Web $w) {
     $animal->insertOrUpdate();
     
     // the msg (message) function redirects with a message box
-    $w->msg('Animal Saved', '/creaturetopia');
+    $w->msg('Animal Saved', '/creaturetopia/index');
 }
