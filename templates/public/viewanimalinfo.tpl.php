@@ -70,7 +70,7 @@
             For information about differnt breeds in this species, click the link below:
           </p>
           <nav>
-            <p><a href="#" target="-blank">Breeds</a></p>
+            <p><a href="/creaturetopia-public/animalReference">Breeds</a></p>
           </nav>
         </div>
       </section>
