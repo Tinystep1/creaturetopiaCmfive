@@ -21,11 +21,7 @@
 <body>
   <div>
     <!--Heading Banner-->
-      <header id="site-name">
-        <h1>
-          Creaturetopia
-        </h1>
-      </header>
+      <?phpinclude_once("templates/include/header.txt");?>
   </div>
   <main class="green-background">
       <section id="animalIntro">
@@ -81,6 +77,7 @@
     </div>
   </main>
     <div>
-      include "templates/include/legal.txt";
+      <!--footer info and links-->
+      <?phpinclude_once("templates/include/legal.txt");?>
     </div>
 </div>

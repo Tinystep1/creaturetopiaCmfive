@@ -1,7 +1,5 @@
-<header>
-    <!--Heading Banner-->
-    <h1 id="site-name">Creaturetopia</h1>
-</header>
+<!--Heading Banner-->
+    <?phpinclude_once("templates/include/header.txt")?>
 <main class="green-background">
     <!--species statistics in list with pictures where available-->
     Table of species
@@ -12,5 +10,6 @@
     <p><a href="/creaturetopia-public/viewanimalinfo/1">Veiw test animal</a></p>
 </div>
 <div>
-      include "templates/include/legal.txt";
+    <!--footer info and links-->
+    <?phpinclude_once("templates/include/legal.txt");?>
 </div>

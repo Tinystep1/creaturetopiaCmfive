@@ -6,7 +6,7 @@ function index_ALL(Web $w) {
     
 
     // access service functions using the Web $w object and the module name
-    $creaturetopiaPetinfo = $w->Creaturetopia->getAllPetinfo();
+    $creaturetopiaPetinfo = CreaturetopiaService::getInstance($w)->getAllPetInfo;
 
     // build the table array adding the headers and the row data
     $table = [];
