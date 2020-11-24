@@ -5,17 +5,23 @@ class InsightTestClass2 extends InsightBaseClass
     public $name="Test Insight 2";
     public $description="Test model for insights in creaturetopia respository";
 
+    //Displays Filters to select user
     public function getFilters(Web $w): array
+
     {
+        return ["Select User" =>[
+            [
+                ["Users", "select", "users", null, AuthService::getInstance($w)->getUsers()]
+            ]
+        ]];
     }
 
-    public function run(Web $w, array $params = []): array
+    //Displays insights for selected member
+    public function run(Web $w, $parameters = []): array
+
     {
-        $run_data = $insight->run($w, $_GET);
-        /** @var InsightReportInterface $data */
-        foreach ($run_data as $data) {
-          $w->out('<h3>' . $data->title . "</h3>");
-            $w->out(Html::table($data->data, null, "tablesorter", $data->header));
-        }
+        $results = [];
+        $results[] = new InsightReportInterface('Test Title', ['column 1', 'column 2'], [['data 1', 'data 2'], ['data 1', 'data 2']]);
+        return $results;
     }
 }
