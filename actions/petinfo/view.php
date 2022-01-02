@@ -1,14 +1,14 @@
 <?php
 
-function view_GET(Web $w) {
-
+function view_GET(Web $w)
+{
     $p = $w->pathMatch('id');
     if (empty($p['id'])) {
-        $w->error('No id found','creaturetopia');
+        $w->error('No id found', 'creaturetopia');
     }
     $animal = $w->creaturetopia->GetPetinfoForId($p['id']);
     if (empty($animal)) {
-        $w->error('No animal found','creaturetopia');
+        $w->error('No animal found', 'creaturetopia');
     }
     $w->ctx("animal", $animal);
 
@@ -28,14 +28,14 @@ function view_GET(Web $w) {
             $row[] = $item->stats_affected;
             // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
             $actions = [];
-            $actions[] = Html::b('/creaturetopia-item/edit/' . $item->id,'Edit Item');
+            $actions[] = Html::b('/creaturetopia-item/edit/' . $item->id, 'Edit Item');
             $actions[] = Html::b('/creaturetopia-petinfo/unlinkitem/' . $animal->id . '?item_id=' . $item->id, 'Remove', 'Are you sure you want to remove this item?');
-            $row[] = implode('',$actions);
+            $row[] = implode('', $actions);
             $table[] = $row;
         }
     }
 
      //send the table to the template using ctx
-     $w->ctx('itemTable', Html::table($table,'item_table','tablesorter',$tableHeaders));
+     $w->ctx('itemTable', Html::table($table, 'item_table', 'tablesorter', $tableHeaders));
 
 }

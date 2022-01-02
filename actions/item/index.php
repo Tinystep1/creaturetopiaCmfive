@@ -1,7 +1,7 @@
 <?php
 
-function index_ALL(Web $w) {
-    
+function index_ALL(Web $w) 
+{
     $w->ctx("title", "See Items");
 
     // access service functions using the Web $w object and the module name
@@ -19,13 +19,13 @@ function index_ALL(Web $w) {
             $row[] = $item->stats_affected;
             // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
             $actions = [];
-            $actions[] = Html::b('/creaturetopia-item/edit/' . $item->id,'Edit Item');
+            $actions[] = Html::b('/creaturetopia-item/edit/' . $item->id, 'Edit Item');
             $actions[] = Html::b('/creaturetopia-item/delete/' . $item->id, 'Delete', 'Are you sure you want to delete this item?');
-            $row[] = implode('',$actions);
+            $row[] = implode('', $actions);
             $table[] = $row;
         }
     }
 
      //send the table to the template using ctx
-     $w->ctx('itemTable', Html::table($table,'item_table','tablesorter',$tableHeaders));
+     $w->ctx('itemTable', Html::table($table, 'item_table', 'tablesorter', $tableHeaders));
 }

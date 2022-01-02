@@ -1,18 +1,19 @@
 <?php
 
-function edit_GET(Web $w) {
+function edit_GET(Web $w)
+{
 
    // we now need to check if we are creating a new item or editing an existing one
    // we will use pathMatch to retrieve an item id from the url.
-   $p = $w->pathMatch('id');
-   // if the id exists we will retrieve the data for that item otherwise we will create a new item. 
-   $item = !empty($p['id']) ? $w->creaturetopia->GetItemForId($p['id']) : new creaturetopiaItem($w);
+    $p = $w->pathMatch('id');
+   // if the id exists we will retrieve the data for that item otherwise we will create a new item.
+    $item = !empty($p['id']) ? $w->creaturetopia->GetItemForId($p['id']) : new creaturetopiaItem($w);
 
     //add a title to the action
    // change the title to reflect editing or adding a new item
-   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
+    $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
 
-    // this array is the form deffinition
+    // this array is the form definition
     $formData = [
         'Item Data' =>[                         // this is a form section title
             [                                   // each array on this level represents a row on the form. This row has only a single input.
@@ -21,25 +22,25 @@ function edit_GET(Web $w) {
             [                                   // this row has 1 input field.
                 ['Description', 'textarea', 'item_description',$item->item_description],    //brief item description
             ],
-            [ 
+            [
                 ['Stat List', 'text','stats_affected',  $item->stats_affected]       //List of stats item affects
             ]
         ]
     ];
 
    // If we are editing an existing item we need to send the id to the post method.
-   if (!empty($p['id'])) {
-       $postUrl = '/creaturetopia-item/edit/' . $item->id;
-   } else {
-       $postUrl = '/creaturetopia-item/edit';
-   }
+    if (!empty($p['id'])) {
+        $postUrl = '/creaturetopia-item/edit/' . $item->id;
+    } else {
+        $postUrl = '/creaturetopia-item/edit';
+    }
    
-        // sending the form to the 'out' function bypasses the template. 
-   $w->out(Html::multiColForm($formData, $postUrl));
-    
+        // sending the form to the 'out' function bypasses the template.
+    $w->out(Html::multiColForm($formData, $postUrl));
 }
 
-function edit_POST(Web $w) {
+function edit_POST(Web $w)
+{
 
     // As in the GET method we need to check if we are editing an existing item.
     $p = $w->pathMatch('id');

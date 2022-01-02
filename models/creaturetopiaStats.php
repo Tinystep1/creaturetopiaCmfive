@@ -1,7 +1,6 @@
 <?php
 
-class creaturetopiaStatistics extends DbObject {
-
+class creaturetopiaStatistics extends DbObject
+{
     public $stat;
-    
 }

@@ -21,7 +21,7 @@
 <body>
   <div>
     <!--Heading Banner-->
-      <?phpinclude_once("templates/include/header.txt");?>
+      <?php include_once("templates/include/header.txt");?>
   </div>
   <main class="green-background">
       <section id="animalIntro">
@@ -36,7 +36,7 @@
   </div>
   <div class="green-background">
     <section id="animalInfo">
-      <!--A few sentances describing what an animal is and looks like-->
+      <!--A few sentences describing what an animal is and looks like-->
       <div id=description>
       <?php echo $animal->description_of_animal; ?>
       </div>
@@ -51,7 +51,7 @@
       <p>
         Stats that can help your animal do well in shows include:
       </p>
-      <!--A list of stats that help that particualr animal score beteer in shows-->
+      <!--A list of stats that help that particular animal score better in shows-->
       <ul id="stats">
         stat list
       </ul>
@@ -63,7 +63,7 @@
         </div>
         <div id="species">
           <p>
-            For information about differnt breeds in this species, click the link below:
+            For information about different breeds in this species, click the link below:
           </p>
           <nav>
             <p><a href="/creaturetopia-public/animalReference">Breeds</a></p>
@@ -78,6 +78,6 @@
   </main>
     <div>
       <!--footer info and links-->
-      <?phpinclude_once("templates/include/legal.txt");?>
+      <?php include_once("templates/include/legal.txt");?>
     </div>
 </div>

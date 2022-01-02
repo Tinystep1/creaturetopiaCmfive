@@ -1,1 +1,1 @@
-<?php echo Html::b("creaturetopia-stats/edit","Add new statistic"); ?>
+<?php echo Html::b("creaturetopia-stats/edit", "Add new statistic");

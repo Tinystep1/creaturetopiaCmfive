@@ -1,5 +1,5 @@
 <!--Heading Banner-->
-    <?phpinclude_once("templates/include/header.txt")?>
+    <?php include_once("templates/include/header.txt")?>
 <main class="green-background">
     <!--species statistics in list with pictures where available-->
     Table of species
@@ -11,5 +11,5 @@
 </div>
 <div>
     <!--footer info and links-->
-    <?phpinclude_once("templates/include/legal.txt");?>
+    <?php include_once("templates/include/legal.txt");?>
 </div>

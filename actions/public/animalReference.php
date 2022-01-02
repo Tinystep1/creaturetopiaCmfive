@@ -1,3 +1,5 @@
 <?php
 
-function animalReference_ALL(Web $w) {}
+function animalReference_ALL(Web $w)
+{
+}

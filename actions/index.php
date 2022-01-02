@@ -1,12 +1,12 @@
 <?php
 
-function index_ALL(Web $w) {
-    
+function index_ALL(Web $w)
+{
     $w->ctx("title", "See Animal Info");
     
 
     // access service functions using the Web $w object and the module name
-    $creaturetopiaPetinfo = CreaturetopiaService::getInstance($w)->getAllPetInfo;
+    $creaturetopiaPetinfo = CreaturetopiaService::getInstance($w)->getAllPetinfo;
 
     // build the table array adding the headers and the row data
     $table = [];
@@ -21,15 +21,14 @@ function index_ALL(Web $w) {
             $row[] = $animal->stat_list;
             // the actions column is used to hold buttons that link to actions per item. Note the item id is added to the href on these buttons.
             $actions = [];
-            $actions[] = Html::b('/creaturetopia-petinfo/edit/' . $animal->id,'Edit Animal');
+            $actions[] = Html::b('/creaturetopia-petinfo/edit/' . $animal->id, 'Edit Animal');
             $actions[] = Html::b('/creaturetopia-petinfo/delete/' . $animal->id, 'Delete', 'Are you sure you want to delete this animal?');
             $actions[] = Html::b('/creaturetopia-petinfo/view/' . $animal->id, 'View animal');
-            $row[] = implode('',$actions);
+            $row[] = implode('', $actions);
             $table[] = $row;
         }
     }
 
     //send the table to the template using ctx
-    $w->ctx('petinfoTable', Html::table($table,'petinfoTable','tablesorter',$tableHeaders));
-    
+    $w->ctx('petinfoTable', Html::table($table, 'petinfoTable', 'tablesorter', $tableHeaders));  
 }
